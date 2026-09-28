@@ -2,9 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://b6e42fummp1li" path="res://scenes/player_adam.tscn" id="1_s3esy"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wp5od"]
+distance = 2.0
+
 [node name="main-game" type="Node2D" unique_id=273012283]
 
 [node name="Player-Adam" parent="." unique_id=2136390633 instance=ExtResource("1_s3esy")]
+position = Vector2(0, -1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=478705968]
+position = Vector2(0, -42)
 zoom = Vector2(3, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2036442881]
+position = Vector2(0, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=181977136]
+position = Vector2(1, -1)
+shape = SubResource("WorldBoundaryShape2D_wp5od")
