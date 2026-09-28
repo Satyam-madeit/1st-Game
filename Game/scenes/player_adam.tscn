@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b6e42fummp1li"]
 
+[ext_resource type="Script" uid="uid://ovm5145t1unu" path="res://scripts/player_adam.gd" id="1_40x70"]
 [ext_resource type="Texture2D" uid="uid://5wt1ayxf7qv2" path="res://assets/Modern tiles_Free/Characters_free/Adam_idle_16x16.png" id="1_brfco"]
 [ext_resource type="Texture2D" uid="uid://dxpaf5s1nr7w3" path="res://assets/Modern tiles_Free/Characters_free/Adam_run_16x16.png" id="2_40x70"]
 
@@ -232,6 +233,7 @@ radius = 4.0
 height = 18.0
 
 [node name="Player-Adam" type="CharacterBody2D" unique_id=2136390633]
+script = ExtResource("1_40x70")
 
 [node name="Adam-Animation" type="AnimatedSprite2D" parent="." unique_id=541713959]
 position = Vector2(8.4703295e-22, -14)
