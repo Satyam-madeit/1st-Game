@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dpejt040wfi8t"]
 
-[ext_resource type="PackedScene" uid="uid://cmtroefnrc78" path="res://scenes/main-character.tscn" id="1_s3esy"]
+[ext_resource type="PackedScene" uid="uid://b6e42fummp1li" path="res://scenes/player_adam.tscn" id="1_s3esy"]
 
 [node name="main-game" type="Node2D" unique_id=273012283]
 
-[node name="main-character" parent="." unique_id=1770761340 instance=ExtResource("1_s3esy")]
-position = Vector2(517, 310)
+[node name="Player-Adam" parent="." unique_id=2136390633 instance=ExtResource("1_s3esy")]
+position = Vector2(512, 303)
