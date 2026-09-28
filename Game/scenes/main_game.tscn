@@ -132,7 +132,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 4.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -232,8 +232,9 @@ animations = [{
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=519736108]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=700180340]
-position = Vector2(-0.5, -3)
+position = Vector2(8.4703295e-22, -14)
 scale = Vector2(1.0625, 0.875)
 sprite_frames = SubResource("SpriteFrames_wp5od")
 animation = &"idle"
-frame_progress = 0.18988508
+autoplay = "idle"
+frame_progress = 0.26112518
