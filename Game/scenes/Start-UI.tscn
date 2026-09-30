@@ -1,9 +1,59 @@
 [gd_scene format=3 uid="uid://cupfox1pya2fo"]
 
-[node name="Control" type="Control" unique_id=1235270006]
+[ext_resource type="Texture2D" uid="uid://dsqox8kiau47b" path="res://assets/parallax_mountain_pack/layers/parallax-mountain-bg.png" id="1_b63ln"]
+[ext_resource type="Script" uid="uid://blle7ywbo8tl5" path="res://scripts/start_ui.gd" id="1_tmnoq"]
+[ext_resource type="Texture2D" uid="uid://5km2ce0uy0mb" path="res://assets/—Pngtree—game button switch start game_5321038.png" id="2_qyy8o"]
+[ext_resource type="Texture2D" uid="uid://b4gblclnqx3rf" path="res://assets/—Pngtree—exit button of graphical user_5533388.png" id="3_qyy8o"]
+
+[sub_resource type="SystemFont" id="SystemFont_k56px"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wp5od"]
+font = SubResource("SystemFont_k56px")
+font_size = 54
+font_color = Color(1, 0.61960787, 1, 1)
+outline_size = 10
+outline_color = Color(0.4, 0.19215687, 1, 1)
+
+[node name="Main Menu" type="Control" unique_id=1235270006]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tmnoq")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1591355437]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 648.0
+texture = ExtResource("1_b63ln")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=1169458624]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 3.0
+offset_right = 1152.0
+offset_bottom = 648.0
+alignment = 1
+
+[node name="TITLE" type="Label" parent="TextureRect/VBoxContainer" unique_id=1251091360]
+layout_mode = 2
+text = "HUNGRY ADAM"
+label_settings = SubResource("LabelSettings_wp5od")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="start" type="Button" parent="TextureRect/VBoxContainer" unique_id=61907238]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+icon = ExtResource("2_qyy8o")
+icon_alignment = 1
+expand_icon = true
+
+[node name="quit" type="Button" parent="TextureRect/VBoxContainer" unique_id=366879280]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+icon = ExtResource("3_qyy8o")
+icon_alignment = 1
+expand_icon = true
