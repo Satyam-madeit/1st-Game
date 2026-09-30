@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dtpcrjuw68gi5" path="res://assets/Assets for dark fantasy/twilight-tiles.png" id="2_72e8q"]
 [ext_resource type="Script" uid="uid://b713vy22kg3nj" path="res://scenes/spawn_point.gd" id="5_ipu61"]
 [ext_resource type="Script" uid="uid://bd0vs02hul2pj" path="res://scenes/checkpoint_1.gd" id="6_ygxny"]
+[ext_resource type="Script" uid="uid://c0qy4445oyobt" path="res://scripts/win.gd" id="7_70vka"]
 [ext_resource type="Texture2D" uid="uid://cfyjvu3knh4jx" path="res://assets/Assets for dark fantasy/bat.png" id="7_wi4c7"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wp5od"]
@@ -640,7 +641,11 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0rdsr")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp5od"]
-size = Vector2(34, 58.625)
+size = Vector2(34, 15)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wp5od"]
+font_size = 30
+font_color = Color(0.83, 0.74700004, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70vka"]
 atlas = ExtResource("7_wi4c7")
@@ -733,14 +738,34 @@ shape = SubResource("RectangleShape2D_wp5od")
 
 [node name="Win" type="Area2D" parent="." unique_id=892043631]
 position = Vector2(244, -65)
-script = ExtResource("6_ygxny")
+script = ExtResource("7_70vka")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Win" unique_id=1096862624]
-position = Vector2(343, 129.6875)
+position = Vector2(343, 151.5)
 shape = SubResource("RectangleShape2D_wp5od")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Win" unique_id=1590150860]
+
+[node name="Label" type="Label" parent="Win/CanvasLayer" unique_id=1409846234]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.5
+offset_top = -21.0
+offset_right = 63.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VICTORY"
+label_settings = SubResource("LabelSettings_wp5od")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="BAT" type="AnimatedSprite2D" parent="." unique_id=1311849492]
 position = Vector2(575, -253)
 sprite_frames = SubResource("SpriteFrames_wp5od")
 animation = &"idle"
-frame_progress = 0.09080893
+frame_progress = 0.017160114
