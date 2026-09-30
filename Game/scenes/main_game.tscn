@@ -636,6 +636,9 @@ texture = ExtResource("2_72e8q")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0rdsr")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wp5od"]
+size = Vector2(15, 27)
+
 [node name="main-game" type="Node2D" unique_id=273012283]
 
 [node name="Indoor BG" type="Parallax2D" parent="." unique_id=1818231887]
@@ -674,3 +677,17 @@ layer_0/tile_data = PackedInt32Array(-11, 720896, 7, -10, 720896, 7, -9, 720896,
 [node name="Spikes" type="TileMapLayer" parent="." unique_id=500342634]
 tile_map_data = PackedByteArray("AAD0/wEAAAACAAwAAAD1/wEAAAACAAwAAAD2/wEAAAACAAwAAAD3/wEAAAACAAwAAAD4/wEAAAACAAwAAAD5/wEAAAACAAwAAAD6/wEAAAACAAwAAAD7/wEAAAACAAwAAAD8/wEAAAACAAwAAAD9/wEAAAACAAwAAAD+/wEAAAACAAwAAAD//wEAAAACAAwAAAAAAAEAAAACAAwAAAABAAEAAAACAAwAAAACAAEAAAACAAwAAAADAAEAAAACAAwAAAAEAAEAAAACAAwAAAAFAAEAAAACAAwAAAAGAAEAAAACAAwAAAAHAAEAAAACAAwAAAAIAAEAAAACAAwAAAAKAAEAAAACAAwAAAAMAAEAAAACAAwAAAANAAEAAAACAAwAAAAOAAEAAAACAAwAAAAPAAEAAAACAAwAAAAQAAEAAAACAAwAAAARAAEAAAACAAwAAAASAAEAAAACAAwAAAATAAEAAAACAAwAAAAUAAEAAAACAAwAAAAVAAEAAAACAAwAAAAWAAEAAAACAAwAAAAXAAEAAAACAAwAAAAYAAEAAAACAAwAAAAZAAEAAAACAAwAAAAaAAEAAAACAAwAAAAbAAEAAAACAAwAAAAcAAEAAAACAAwAAAAdAAEAAAACAAwAAAAeAAEAAAACAAwAAAAfAAEAAAACAAwAAAAfAAYAAAACAAwAAAAgAAYAAAACAAwAAAAhAAYAAAACAAwAAAAnAAYAAAACAAwAAAAoAAYAAAACAAwAAAApAAYAAAACAAwAAAAqAAYAAAACAAwAAAArAAYAAAACAAwAAAA=")
 tile_set = SubResource("TileSet_vkdpk")
+
+[node name="spawn point" type="Area2D" parent="." unique_id=1262901221]
+position = Vector2(-165, -45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spawn point" unique_id=232632662]
+position = Vector2(-2.5, -37)
+shape = SubResource("RectangleShape2D_wp5od")
+
+[node name="checkpoint 1" type="Area2D" parent="." unique_id=2128914819]
+position = Vector2(-165, -45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint 1" unique_id=1474426196]
+position = Vector2(316, -49)
+shape = SubResource("RectangleShape2D_wp5od")
