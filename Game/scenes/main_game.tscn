@@ -637,7 +637,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0rdsr")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wp5od"]
-size = Vector2(15, 27)
+size = Vector2(40.75, 60.5)
 
 [node name="main-game" type="Node2D" unique_id=273012283]
 
@@ -682,12 +682,12 @@ tile_set = SubResource("TileSet_vkdpk")
 position = Vector2(-165, -45)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spawn point" unique_id=232632662]
-position = Vector2(-2.5, -37)
+position = Vector2(6.375, -20.25)
 shape = SubResource("RectangleShape2D_wp5od")
 
 [node name="checkpoint 1" type="Area2D" parent="." unique_id=2128914819]
 position = Vector2(-165, -45)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="checkpoint 1" unique_id=1474426196]
-position = Vector2(316, -49)
+position = Vector2(312.25, -49)
 shape = SubResource("RectangleShape2D_wp5od")
